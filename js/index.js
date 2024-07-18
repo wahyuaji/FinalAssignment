@@ -21,6 +21,22 @@ let motorbikes = [
 
 let konten_el = document.getElementById("konten-holder");
 
+let hasil= motorbikes.filter(motorbike => motorbike.type !="");
+
+hasil.forEach(motorbike => {
+  konten_el.innerHTML += `
+    <div class="card" style="width: 18rem;">
+    <img src=${motorbike.image} class="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title">${motorbike.codename}</h5>
+      <p class="card-text">${motorbike.type}</p>
+      <p class="card-text">Likes: ${motorbike.likes}</p>
+      <a href="#" class="btn btn-primary">Check it out!</a>
+    </div>
+  </div>
+  `
+});
+
 function show_all(){
   konten_el.innerHTML = "";
   let hasil= motorbikes.filter(motorbike => motorbike.type !="");
