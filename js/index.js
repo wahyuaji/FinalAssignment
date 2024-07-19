@@ -25,7 +25,7 @@ let hasil= motorbikes.filter(motorbike => motorbike.type !="");
 
 hasil.forEach(motorbike => {
   konten_el.innerHTML += `
-    <div class="card" style="width: 18rem;">
+  <div class="card" style="width: 18rem;">
     <img src=${motorbike.image} class="card-img-top">
     <div class="card-body">
       <h5 class="card-title">${motorbike.codename}</h5>
